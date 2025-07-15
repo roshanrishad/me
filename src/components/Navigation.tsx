@@ -41,10 +41,10 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-cosmic rounded-curve flex items-center justify-center glow-primary">
-              <Sparkles className="w-6 h-6 text-foreground" />
+            <div className="w-30 h-10 bg-cosmic rounded-curve flex items-center justify-center glow-primary">
+              <img src="/me/Images/mylogo.png" className="w-15 h-6 text-foreground" />
             </div>
-            <span className="text-xl font-bold text-gradient-cosmic">RR</span>
+            <span className="text-xl font-bold text-gradient-cosmic"></span>
           </div>
 
           {/* Desktop Navigation */}
