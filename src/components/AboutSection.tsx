@@ -51,7 +51,7 @@ const AboutSection = () => {
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  I'm <span className="text-primary font-semibold">Roshan Rishad</span>, a passionate UI/UX designer and artist 
+                  I'm <span className="text-primary font-semibold">Roshan Rishad Karuthodath</span>, a passionate UI/UX designer and artist 
                   who believes in creating digital experiences that surprise and delight users. 
                   My journey combines technical precision with artistic intuition.
                 </p>

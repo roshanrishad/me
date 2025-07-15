@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const portfolioData = {
   logos: [
-    { name: "CR Logo", tool: "Illustrator", description: "Vibrant and modern tech-style logo with abstract geometric elements and playful colors.", color: "energy-orange", image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop" },
+    { name: "CR Logo", tool: "Illustrator", description: "Vibrant and modern tech-style logo with abstract geometric elements and playful colors.", color: "energy-orange", image: "/me/Images/CR.png" },
     { name: "Marine X", tool: "Illustrator", description: "Sleek and bold wordmark logo with a strong, futuristic 'X' symbol in gradient blue.", color: "energy-blue", image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop" },
     { name: "Rurabox", tool: "Illustrator", description: "Bright and friendly orange logo featuring a basket icon and clean, modern typography.", color: "energy-orange", image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop" },
     { name: "Shinetex", tool: "Illustrator", description: "Elegant monogram logo with a crown accent, combining shield and ribbon elements for a premium brand feel.", color: "primary", image: "https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop" }
@@ -164,7 +164,7 @@ const PortfolioGrid = () => {
                         <img 
                           src={item.image} 
                           alt={item.name}
-                          className="w-full h-64 object-cover"
+                          className="w-full h-64 object-contain"
                         />
                         <div className="absolute top-4 right-4">
                           <div 
