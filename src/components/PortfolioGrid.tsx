@@ -2,41 +2,42 @@ import { ExternalLink, Figma, Monitor, Smartphone, Image as ImageIcon, Palette, 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useState } from "react";
 
 const portfolioData = {
   logos: [
-    { name: "CR Logo", tool: "Illustrator", description: "Vibrant and modern tech-style logo with abstract geometric elements and playful colors.", color: "energy-orange", image: "/me/Images/cr.jpg" },
-    { name: "Marine X", tool: "Illustrator", description: "Sleek and bold wordmark logo with a strong, futuristic 'X' symbol in gradient blue.", color: "energy-blue", image: "/me/Images/marinex.png" },
-    { name: "Rurabox", tool: "Illustrator", description: "Bright and friendly orange logo featuring a basket icon and clean, modern typography.", color: "energy-orange", image: "/me/Images/rurabox.png" },
-    { name: "Shinetex", tool: "Illustrator", description: "Elegant monogram logo with a crown accent, combining shield and ribbon elements for a premium brand feel.", color: "primary", image: "/me/Images/shinetex.png" }
+    { name: "CR Logo", tool: "Illustrator", description: "Vibrant and modern tech-style logo with abstract geometric elements and playful colors.", color: "energy-orange", images: ["/me/Images/cr.jpg"] },
+    { name: "Marine X", tool: "Illustrator", description: "Sleek and bold wordmark logo with a strong, futuristic 'X' symbol in gradient blue.", color: "energy-blue", images: ["/me/Images/marinex.png"] },
+    { name: "Rurabox", tool: "Illustrator", description: "Bright and friendly orange logo featuring a basket icon and clean, modern typography.", color: "energy-orange", images: ["/me/Images/rurabox.png"] },
+    { name: "Shinetex", tool: "Illustrator", description: "Elegant monogram logo with a crown accent, combining shield and ribbon elements for a premium brand feel.", color: "primary", images: ["/me/Images/shinetex.png"] }
   ],
   posters: [
-    { name: "CodeRythm", tool: "Photoshop / Illustrator", description: "Creative poster designs for various occasions including Easter, Environment day, Hiring, Holi, NewYear, and Onam celebrations.", color: "energy-orange", image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop" },
-    { name: "Moulana Hospital", tool: "Photoshop / Illustrator", description: "Awareness poster designs for Heart day, Earth day, liver day, environmental day, and Alzheimer's day campaigns.", color: "energy-pink", image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=300&fit=crop" },
-    { name: "Institutional Works", tool: "Photoshop / Illustrator", description: "Educational poster designs for Expo events and magazine cover layouts with modern typography and layouts.", color: "energy-blue", image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop" }
+    { name: "CodeRythm", tool: "Photoshop / Illustrator", description: "Creative poster designs for various occasions including Easter, Environment day, Hiring, Holi, NewYear, and Onam celebrations.", color: "energy-orange", images: ["https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop", "https://images.unsplash.com/photo-1505238680356-667803448bb6?w=400&h=300&fit=crop"] },
+    { name: "Moulana Hospital", tool: "Photoshop / Illustrator", description: "Awareness poster designs for Heart day, Earth day, liver day, environmental day, and Alzheimer's day campaigns.", color: "energy-pink", images: ["https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=300&fit=crop", "https://images.unsplash.com/photo-1505238680356-667803448bb6?w=400&h=300&fit=crop"] },
+    { name: "Institutional Works", tool: "Photoshop / Illustrator", description: "Educational poster designs for Expo events and magazine cover layouts with modern typography and layouts.", color: "energy-blue", images: ["https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop"] }
   ],
   apps: [
-    { name: "Findnow", tool: "Figma", description: "Location-based business discovery app with a user-friendly and intuitive interface.", color: "energy-green", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop" },
-    { name: "Fakhra", tool: "Figma", description: "Elegant black-and-white e-commerce app designed for premium perfume shopping.", color: "accent", image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=300&fit=crop" },
-    { name: "Tasleem", tool: "Figma", description: "Bold red-and-white courier service app with a clean and functional layout.", color: "energy-pink", image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop" },
-    { name: "BeOrganic", tool: "Figma", description: "Green-themed grocery shopping app focused on organic and eco-friendly products.", color: "energy-green", image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=400&h=300&fit=crop" },
-    { name: "Chargemeter", tool: "Figma", description: "EV charging station locator app with a modern blue, green, and purple color scheme.", color: "energy-blue", image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop" },
-    { name: "Sayartak", tool: "Figma", description: "Vehicle service booking app with a clean blue-and-white interface and service locator tools.", color: "energy-blue", image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop" }
+    { name: "Findnow", tool: "Figma", description: "Location-based business discovery app with a user-friendly and intuitive interface.", color: "energy-green", images: ["https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop"] },
+    { name: "Fakhra", tool: "Figma", description: "Elegant black-and-white e-commerce app designed for premium perfume shopping.", color: "accent", images: ["https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=300&fit=crop"] },
+    { name: "Tasleem", tool: "Figma", description: "Bold red-and-white courier service app with a clean and functional layout.", color: "energy-pink", images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop"] },
+    { name: "BeOrganic", tool: "Figma", description: "Green-themed grocery shopping app focused on organic and eco-friendly products.", color: "energy-green", images: ["https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=400&h=300&fit=crop"] },
+    { name: "Chargemeter", tool: "Figma", description: "EV charging station locator app with a modern blue, green, and purple color scheme.", color: "energy-blue", images: ["https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop"] },
+    { name: "Sayartak", tool: "Figma", description: "Vehicle service booking app with a clean blue-and-white interface and service locator tools.", color: "energy-blue", images: ["https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop"] }
   ],
   websites: [
-    { name: "CodeRythm", tool: "Figma", description: "Modern rebranding website for an IT solutions company with sleek animations and smooth transitions.", color: "primary", image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=300&fit=crop" },
-    { name: "Aqtabot", tool: "Figma", description: "Location-based business directory website designed for seamless local discovery.", color: "energy-green", image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop" },
-    { name: "Edison AI", tool: "Figma", description: "Conversational AI platform website with a futuristic UI", color: "energy-blue", image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&h=300&fit=crop" },
-    { name: "Mobicart", tool: "Figma", description: "E-commerce website for mobile devices and parts with a clean, tech-oriented layout.", color: "energy-orange", image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop" },
-    { name: "Propartners", tool: "Figma", description: "Travel and destination booking website with vibrant visuals and user-friendly flow.", color: "accent", image: "https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop" },
-    { name: "Damas", tool: "Figma", description: "Elegant furniture brand website showcasing products with a premium look and feel.", color: "secondary", image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop" }
+    { name: "CodeRythm", tool: "Figma", description: "Modern rebranding website for an IT solutions company with sleek animations and smooth transitions.", color: "primary", images: ["https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=300&fit=crop"] },
+    { name: "Aqtabot", tool: "Figma", description: "Location-based business directory website designed for seamless local discovery.", color: "energy-green", images: ["https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop"] },
+    { name: "Edison AI", tool: "Figma", description: "Conversational AI platform website with a futuristic UI", color: "energy-blue", images: ["https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&h=300&fit=crop"] },
+    { name: "Mobicart", tool: "Figma", description: "E-commerce website for mobile devices and parts with a clean, tech-oriented layout.", color: "energy-orange", images: ["https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop"] },
+    { name: "Propartners", tool: "Figma", description: "Travel and destination booking website with vibrant visuals and user-friendly flow.", color: "accent", images: ["https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop"] },
+    { name: "Damas", tool: "Figma", description: "Elegant furniture brand website showcasing products with a premium look and feel.", color: "secondary", images: ["https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop"] }
   ],
   products: [
-    { name: "CR Logo", tool: "Illustrator", description: "Vibrant and modern tech-style logo with abstract geometric elements and playful colors.", color: "energy-orange", image: "/me/Images/cr.jpg" },
-    { name: "Marine X", tool: "Illustrator", description: "Sleek and bold wordmark logo with a strong, futuristic 'X' symbol in gradient blue.", color: "energy-blue", image: "/me/Images/marinex.png" },
-    { name: "Rurabox", tool: "Illustrator", description: "Bright and friendly orange logo featuring a basket icon and clean, modern typography.", color: "energy-orange", image: "/me/Images/rurabox.png" },
-    { name: "Shinetex", tool: "Illustrator", description: "Elegant monogram logo with a crown accent, combining shield and ribbon elements for a premium brand feel.", color: "primary", image: "/me/Images/shinetex.png" }
+    { name: "CR Logo", tool: "Illustrator", description: "Vibrant and modern tech-style logo with abstract geometric elements and playful colors.", color: "energy-orange", images: ["/me/Images/cr.jpg"] },
+    { name: "Marine X", tool: "Illustrator", description: "Sleek and bold wordmark logo with a strong, futuristic 'X' symbol in gradient blue.", color: "energy-blue", images: ["/me/Images/marinex.png"] },
+    { name: "Rurabox", tool: "Illustrator", description: "Bright and friendly orange logo featuring a basket icon and clean, modern typography.", color: "energy-orange", images: ["/me/Images/rurabox.png"] },
+    { name: "Shinetex", tool: "Illustrator", description: "Elegant monogram logo with a crown accent, combining shield and ribbon elements for a premium brand feel.", color: "primary", images: ["/me/Images/shinetex.png"] }
   ]
 };
 
@@ -68,14 +69,14 @@ const PortfolioGrid = () => {
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gradient-cosmic">
             Creative Portfolio
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A collection of mobile apps, websites, logos and artistic creations. 
+            A collection of mobile apps, websites, logos and artistic creations.
             Each project tells a unique story through design.
           </p>
         </div>
@@ -98,22 +99,22 @@ const PortfolioGrid = () => {
               {items.map((item, index) => (
                 <Dialog key={item.name}>
                   <DialogTrigger asChild>
-                    <Card 
+                    <Card
                       className="group hover-lift transition-smooth border-2 border-border/50 hover:border-primary/50 bg-surface overflow-hidden cursor-pointer animate-floating"
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
                       {/* Project Image */}
                       <div className="relative overflow-hidden">
-                        <img 
-                          src={item.image} 
+                        <img
+                          src={item.images[0]}
                           alt={item.name}
                           className="w-full h-48 object-cover group-hover:scale-110 transition-smooth"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-                        
+
                         {/* Color indicator */}
                         <div className="absolute top-3 right-3">
-                          <div 
+                          <div
                             className={`w-3 h-3 rounded-full bg-${item.color} animate-pulse-glow`}
                           />
                         </div>
@@ -128,11 +129,11 @@ const PortfolioGrid = () => {
                               {item.tool}
                             </Badge>
                           </div>
-                          
+
                           <p className="text-muted-foreground text-sm leading-relaxed">
                             {item.description}
                           </p>
-                          
+
                           {/* Hover Action - Only show for non-logos and non-posters */}
                           {category !== 'logos' && category !== 'posters' && (
                             <div className="opacity-0 group-hover:opacity-100 transition-smooth pt-2">
@@ -142,7 +143,7 @@ const PortfolioGrid = () => {
                               </div>
                             </div>
                           )}
-                          
+
                           {/* Click to view for logos and posters */}
                           {(category === 'logos' || category === 'posters') && (
                             <div className="opacity-0 group-hover:opacity-100 transition-smooth pt-2">
@@ -155,7 +156,7 @@ const PortfolioGrid = () => {
                       </CardContent>
                     </Card>
                   </DialogTrigger>
-                  
+
                   <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
                     <DialogHeader>
                       <DialogTitle className="text-2xl font-bold text-gradient-cosmic">
@@ -165,22 +166,27 @@ const PortfolioGrid = () => {
                         {category.slice(0, -1).charAt(0).toUpperCase() + category.slice(1, -1)} project created with {item.tool}
                       </DialogDescription>
                     </DialogHeader>
-                    
+
                     <div className="space-y-6">
-                      {/* Project Image */}
-                      <div className="relative overflow-hidden rounded-lg">
-                        <img 
-                          src={item.image} 
-                          alt={item.name}
-                          className="w-full h-64 object-contain"
-                        />
-                        <div className="absolute top-4 right-4">
-                          <div 
-                            className={`w-4 h-4 rounded-full bg-${item.color} animate-pulse-glow`}
-                          />
-                        </div>
-                      </div>
-                      
+                      {/* Project Image Carousel */}
+                      <Carousel className="w-full max-w-xl mx-auto">
+                        <CarouselContent>
+                          {item.images.map((image, index) => (
+                            <CarouselItem key={index}>
+                              <div className="p-1">
+                                <Card>
+                                  <CardContent className="flex aspect-video items-center justify-center p-6">
+                                    <img src={image} alt={`${item.name} screenshot ${index + 1}`} className="w-full h-full object-contain" />
+                                  </CardContent>
+                                </Card>
+                              </div>
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                      </Carousel>
+
                       {/* Project Details */}
                       <div className="space-y-4">
                         <div className="flex items-center gap-4">
@@ -192,18 +198,18 @@ const PortfolioGrid = () => {
                             {item.tool}
                           </Badge>
                         </div>
-                        
+
                         <div>
                           <h4 className="text-lg font-semibold mb-2">Project Description</h4>
                           <p className="text-muted-foreground leading-relaxed">
                             {item.description}
                           </p>
                         </div>
-                        
+
                         {/* Additional details based on category */}
                         <div>
-                        {category !== 'products' && (
-                          <h4 className="text-lg font-semibold mb-2">Project Details</h4>
+                          {category !== 'products' && (
+                            <h4 className="text-lg font-semibold mb-2">Project Details</h4>
                           )}
                           <div className="space-y-2 text-sm">
                             {category === 'logos' && (
