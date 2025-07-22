@@ -1,4 +1,4 @@
-import { ExternalLink, Figma, Monitor, Smartphone, Image as ImageIcon, Palette } from "lucide-react";
+import { ExternalLink, Figma, Monitor, Smartphone, Image as ImageIcon, Palette, Package } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
@@ -31,6 +31,12 @@ const portfolioData = {
     { name: "Mobicart", tool: "Figma", description: "E-commerce website for mobile devices and parts with a clean, tech-oriented layout.", color: "energy-orange", image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop" },
     { name: "Propartners", tool: "Figma", description: "Travel and destination booking website with vibrant visuals and user-friendly flow.", color: "accent", image: "https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop" },
     { name: "Damas", tool: "Figma", description: "Elegant furniture brand website showcasing products with a premium look and feel.", color: "secondary", image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop" }
+  ],
+  products: [
+    { name: "CR Logo", tool: "Illustrator", description: "Vibrant and modern tech-style logo with abstract geometric elements and playful colors.", color: "energy-orange", image: "/me/Images/cr.jpg" },
+    { name: "Marine X", tool: "Illustrator", description: "Sleek and bold wordmark logo with a strong, futuristic 'X' symbol in gradient blue.", color: "energy-blue", image: "/me/Images/marinex.png" },
+    { name: "Rurabox", tool: "Illustrator", description: "Bright and friendly orange logo featuring a basket icon and clean, modern typography.", color: "energy-orange", image: "/me/Images/rurabox.png" },
+    { name: "Shinetex", tool: "Illustrator", description: "Elegant monogram logo with a crown accent, combining shield and ribbon elements for a premium brand feel.", color: "primary", image: "/me/Images/shinetex.png" }
   ]
 };
 
@@ -40,6 +46,7 @@ const getCategoryIcon = (category: string) => {
     case 'apps': return <Smartphone className="w-5 h-5" />;
     case 'websites': return <Monitor className="w-5 h-5" />;
     case 'posters': return <ImageIcon className="w-5 h-5" />;
+    case 'products': return <Package className="w-5 h-5" />;
     default: return <ImageIcon className="w-5 h-5" />;
   }
 };
@@ -50,6 +57,7 @@ const getCategoryColor = (category: string) => {
     case 'apps': return 'energy-blue';
     case 'websites': return 'energy-green';
     case 'posters': return 'energy-pink';
+    case 'products': return 'energy-pink';
     default: return 'primary';
   }
 };
@@ -194,7 +202,9 @@ const PortfolioGrid = () => {
                         
                         {/* Additional details based on category */}
                         <div>
+                        {category !== 'products' && (
                           <h4 className="text-lg font-semibold mb-2">Project Details</h4>
+                          )}
                           <div className="space-y-2 text-sm">
                             {category === 'logos' && (
                               <>

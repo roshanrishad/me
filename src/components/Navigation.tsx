@@ -38,10 +38,10 @@ const Navigation = () => {
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-32">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="h-18 w-20 ">
+            <div className="h-26 w-32 ">
   <img src="/me/Images/mylogo.png" className="h-42" alt="Logo" />
 </div>
             <span className="text-xl font-bold text-gradient-cosmic"></span>

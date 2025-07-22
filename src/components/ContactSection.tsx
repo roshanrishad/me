@@ -14,7 +14,7 @@ const ContactSection = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gradient-cosmic">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gradient-cosmic" style={{lineHeight: "1.5"}}>
             Let's Create Together
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

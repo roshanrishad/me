@@ -53,7 +53,7 @@ const Hero = () => {
               onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore My Work
-              <ArrowDown className="ml-2 w-5 h-5" />
+              <ArrowDown className="ml-1 w-5 h-5" />
             </Button>
             <Button 
               variant="outline" 
@@ -67,7 +67,7 @@ const Hero = () => {
         </div>
         
         {/* Floating portfolio preview */}
-        <div className="absolute bottom-10 right-10 hidden lg:block">
+        {/* <div className="absolute bottom-10 right-10 hidden lg:block">
           <div className="relative">
             <img 
               src={portfolioFloat} 
@@ -76,7 +76,7 @@ const Hero = () => {
             />
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-energy-green rounded-full animate-pulse-glow" />
           </div>
-        </div>
+        </div> */}
       </div>
       
       {/* Scroll indicator */}
@@ -85,7 +85,7 @@ const Hero = () => {
       </div>
       
       {/* Curved bottom transition */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-background curve-top" />
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-surface curve-top" />
     </section>
   );
 };

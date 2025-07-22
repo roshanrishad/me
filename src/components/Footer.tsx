@@ -10,13 +10,13 @@ const Footer = () => {
     <footer className="relative py-16 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-cosmic opacity-40" />
-      <div className="absolute top-0 left-0 right-0 h-20 bg-background curve-bottom" />
+      {/* <div className="absolute top-0 left-0 right-0 h-20 bg-background curve-bottom" /> */}
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center space-y-8">
           {/* Main Message */}
           <div className="space-y-4">
-            <h3 className="text-3xl md:text-4xl font-bold text-gradient-cosmic">
+            <h3 className="text-3xl md:text-4xl font-bold text-gradient-cosmic" style={{lineHeight:"1.5"}}>
               Thanks for Visiting!
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -38,16 +38,14 @@ const Footer = () => {
           <div className="pt-8 border-t border-border/30">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-muted-foreground">
-                © 2024 Roshan Rishad. Crafted with{" "}
-                <Heart className="inline w-4 h-4 text-energy-pink mx-1" />
-                and creativity.
+                © 2024 Roshan Rishad. 
               </p>
               
               <Button
                 variant="ghost"
-                size="sm"
+                // size="sm"
                 onClick={scrollToTop}
-                className="hover:bg-primary/20 transition-smooth rounded-curve"
+                className="hover:bg-primary/20 transition-smooth rounded-curve z-40"
               >
                 Back to Top
                 <ArrowUp className="ml-2 w-4 h-4" />

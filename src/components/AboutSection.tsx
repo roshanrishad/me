@@ -5,8 +5,8 @@ import roshanPortrait from "@/assets/roshan-portrait.jpg";
 const skills = [
   { name: "UI/UX Design", icon: Palette, level: 95, color: "energy-pink" },
   { name: "Figma", icon: Code2, level: 98, color: "energy-blue" },
-  { name: "Illustrator", icon: Sparkles, level: 90, color: "energy-orange" },
-  { name: "Photoshop", icon: Star, level: 85, color: "accent" },
+  { name: "Illustrator", icon: Sparkles, level: 85, color: "energy-orange" },
+  { name: "Photoshop", icon: Star, level: 90, color: "accent" },
   { name: "Creative Vision", icon: Heart, level: 100, color: "primary" },
   { name: "Problem Solving", icon: Coffee, level: 92, color: "energy-green" }
 ];
