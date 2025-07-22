@@ -6,16 +6,16 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { useState } from "react";
 
 const portfolioData = {
-  logos: [
+  logos: [ 
     { name: "CR Logo", tool: "Illustrator", description: "Vibrant and modern tech-style logo with abstract geometric elements and playful colors.", color: "energy-orange", images: ["/me/Images/cr.jpg"] },
     { name: "Marine X", tool: "Illustrator", description: "Sleek and bold wordmark logo with a strong, futuristic 'X' symbol in gradient blue.", color: "energy-blue", images: ["/me/Images/marinex.png"] },
     { name: "Rurabox", tool: "Illustrator", description: "Bright and friendly orange logo featuring a basket icon and clean, modern typography.", color: "energy-orange", images: ["/me/Images/rurabox.png"] },
     { name: "Shinetex", tool: "Illustrator", description: "Elegant monogram logo with a crown accent, combining shield and ribbon elements for a premium brand feel.", color: "primary", images: ["/me/Images/shinetex.png"] }
   ],
   posters: [
-    { name: "CodeRythm", tool: "Photoshop / Illustrator", description: "Creative poster designs for various occasions including Easter, Environment day, Hiring, Holi, NewYear, and Onam celebrations.", color: "energy-orange", images: ["https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop", "https://images.unsplash.com/photo-1505238680356-667803448bb6?w=400&h=300&fit=crop"] },
-    { name: "Moulana Hospital", tool: "Photoshop / Illustrator", description: "Awareness poster designs for Heart day, Earth day, liver day, environmental day, and Alzheimer's day campaigns.", color: "energy-pink", images: ["https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=300&fit=crop", "https://images.unsplash.com/photo-1505238680356-667803448bb6?w=400&h=300&fit=crop"] },
-    { name: "Institutional Works", tool: "Photoshop / Illustrator", description: "Educational poster designs for Expo events and magazine cover layouts with modern typography and layouts.", color: "energy-blue", images: ["https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop"] }
+    { name: "CodeRythm", tool: "Photoshop / Illustrator", description: "Creative poster designs for various occasions including Easter, Environment day, Hiring, Holi, NewYear, and Onam celebrations.", color: "energy-orange", images: ["/me/Images/cr1.png", "/me/Images/cr2.png"] },
+    { name: "Moulana Hospital", tool: "Photoshop / Illustrator", description: "Awareness poster designs for Heart day, Earth day, liver day, environmental day, and Alzheimer's day campaigns.", color: "energy-pink", images: ["/me/Images/moulana1.png", "/me/Images/moulana2.png"] },
+    { name: "Institutional Works", tool: "Photoshop / Illustrator", description: "Educational poster designs for Expo events and magazine cover layouts with modern typography and layouts.", color: "energy-blue", images: ["https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop", "https://images.unsplash.com/photo-1505238680356-667803448bb6?w=400&h=300&fit=crop"] }
   ],
   apps: [
     { name: "Findnow", tool: "Figma", description: "Location-based business discovery app with a user-friendly and intuitive interface.", color: "energy-green", images: ["https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop"] },
