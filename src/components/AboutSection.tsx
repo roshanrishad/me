@@ -104,8 +104,8 @@ const AboutSection = () => {
             {/* Fun Stats */}
             <div className="grid grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-energy-orange">25+</div>
-                <div className="text-sm text-muted-foreground">Projects</div>
+                <div className="text-3xl font-bold text-energy-orange">35+</div>
+                <div className="text-sm text-muted-foreground">Projects Completed</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-energy-green">6+</div>

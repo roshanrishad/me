@@ -6,15 +6,15 @@ import { useState } from "react";
 
 const portfolioData = {
   logos: [
-    { name: "CR Logo", tool: "Illustrator", description: "Vibrant and modern tech-style logo with abstract geometric elements and playful colors.", color: "energy-orange", image: "/me/Images/CR.png" },
+    { name: "CR Logo", tool: "Illustrator", description: "Vibrant and modern tech-style logo with abstract geometric elements and playful colors.", color: "energy-orange", image: "/me/Images/cr.jpg" },
     { name: "Marine X", tool: "Illustrator", description: "Sleek and bold wordmark logo with a strong, futuristic 'X' symbol in gradient blue.", color: "energy-blue", image: "/me/Images/marinex.png" },
-    { name: "Rurabox", tool: "Illustrator", description: "Bright and friendly orange logo featuring a basket icon and clean, modern typography.", color: "energy-orange", image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop" },
-    { name: "Shinetex", tool: "Illustrator", description: "Elegant monogram logo with a crown accent, combining shield and ribbon elements for a premium brand feel.", color: "primary", image: "https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop" }
+    { name: "Rurabox", tool: "Illustrator", description: "Bright and friendly orange logo featuring a basket icon and clean, modern typography.", color: "energy-orange", image: "/me/Images/rurabox.png" },
+    { name: "Shinetex", tool: "Illustrator", description: "Elegant monogram logo with a crown accent, combining shield and ribbon elements for a premium brand feel.", color: "primary", image: "/me/Images/shinetex.png" }
   ],
   posters: [
-    { name: "CR", tool: "Photoshop / Illustrator", description: "Creative poster designs for various occasions including Easter, Environment day, Hiring, Holi, NewYear, and Onam celebrations.", color: "energy-orange", image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop" },
-    { name: "Moulana", tool: "Photoshop / Illustrator", description: "Awareness poster designs for Heart day, Earth day, liver day, environmental day, and Alzheimer's day campaigns.", color: "energy-pink", image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=300&fit=crop" },
-    { name: "College", tool: "Photoshop / Illustrator", description: "Educational poster designs for Expo events and magazine cover layouts with modern typography and layouts.", color: "energy-blue", image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop" }
+    { name: "CodeRythm", tool: "Photoshop / Illustrator", description: "Creative poster designs for various occasions including Easter, Environment day, Hiring, Holi, NewYear, and Onam celebrations.", color: "energy-orange", image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop" },
+    { name: "Moulana Hospital", tool: "Photoshop / Illustrator", description: "Awareness poster designs for Heart day, Earth day, liver day, environmental day, and Alzheimer's day campaigns.", color: "energy-pink", image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=300&fit=crop" },
+    { name: "Institutional Works", tool: "Photoshop / Illustrator", description: "Educational poster designs for Expo events and magazine cover layouts with modern typography and layouts.", color: "energy-blue", image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop" }
   ],
   apps: [
     { name: "Findnow", tool: "Figma", description: "Location-based business discovery app with a user-friendly and intuitive interface.", color: "energy-green", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop" },
@@ -67,7 +67,7 @@ const PortfolioGrid = () => {
             Creative Portfolio
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A collection of logos, mobile apps, websites, and artistic creations. 
+            A collection of mobile apps, websites, logos and artistic creations. 
             Each project tells a unique story through design.
           </p>
         </div>
