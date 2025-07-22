@@ -11,7 +11,7 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBackground})` }}
       />
-      <div className="absolute inset-0 bg-cosmic opacity-80" />
+      <div className="absolute inset-0 bg-black opacity-80" />
       
       {/* Floating elements */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-energy-orange rounded-full float opacity-20 blur-xl" />
