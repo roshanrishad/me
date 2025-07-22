@@ -39,16 +39,16 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Name with gradient */}
-          <h1 className="text-6xl md:text-6xl font-bold mb-6 text-white">
+          <h1 className="text-6xl md:text-5xl font-bold mb-6 text-white">
             Bonjour! Welcome to
           </h1>
           
 
 <TrueFocus 
-sentence="Roshan's Design Haus"
-manualMode={false}
+sentence="Roshan's Atelier"
+manualMode={true}
 blurAmount={5}
-borderColor="blue"
+borderColor="purple"
 animationDuration={1}
 pauseBetweenAnimations={1}
 />
