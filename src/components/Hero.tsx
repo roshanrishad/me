@@ -2,10 +2,27 @@ import { ArrowDown, Sparkles, Palette, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBackground from "@/assets/hero-bg.jpg";
 import portfolioFloat from "@/assets/portfolio-float.jpg";
-
+import LightRays from './LightRays';
+import TrueFocus from './ui/TrueFocus';
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      
+
+<div style={{ width: '100vw', height: '600px', position: 'absolute' }}>
+  <LightRays
+    raysOrigin="top-center"
+    raysColor="#00ffff"
+    raysSpeed={1.5}
+    lightSpread={0.8}
+    rayLength={1.2}
+    followMouse={true}
+    mouseInfluence={0.1}
+    noiseAmount={0.1}
+    distortion={0.05}
+    className="custom-rays"
+  />
+</div>
       {/* Background with gradient overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -22,12 +39,21 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Name with gradient */}
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 text-white">
-            Roshan Rishad
+          <h1 className="text-6xl md:text-6xl font-bold mb-6 text-white">
+            Bonjour! Welcome to
           </h1>
           
+
+<TrueFocus 
+sentence="Roshan's Design Haus"
+manualMode={false}
+blurAmount={5}
+borderColor="blue"
+animationDuration={1}
+pauseBetweenAnimations={1}
+/>
           {/* Subtitle with icons */}
-          <div className="flex items-center justify-center gap-4 mb-8">
+          <div className="flex items-center justify-center gap-4 mb-8 mt-8">
             <div className="flex items-center gap-2 bg-muted/20 backdrop-blur-sm rounded-full px-4 py-2">
               <Palette className="w-5 h-5 text-energy-pink" />
               <span className="text-lg">UI/UX Designer</span>
