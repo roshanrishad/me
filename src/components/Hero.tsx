@@ -59,7 +59,7 @@ pauseBetweenAnimations={1}
               <span className="text-lg">UI/UX Designer</span>
             </div>
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse-glow" />
-            <div className="flex items-center gap-2 bg-muted/20 backdrop-blur-sm rounded-full px-4 py-2">
+            <div className="flex items-center gap-2 bg-muted/20 backdrop-blur-sm rounded-full px-6 py-2">
               <Sparkles className="w-5 h-5 text-energy-orange" />
               <span className="text-lg">Artist</span>
             </div>
