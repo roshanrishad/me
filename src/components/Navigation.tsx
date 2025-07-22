@@ -41,9 +41,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-30 h-10 bg-cosmic rounded-curve flex items-center justify-center glow-primary">
-              <img src="/me/Images/mylogo.png" className="w-15 h-6 text-foreground" />
-            </div>
+            <div className="h-18 w-20 ">
+  <img src="/me/Images/mylogo.png" className="h-42" alt="Logo" />
+</div>
             <span className="text-xl font-bold text-gradient-cosmic"></span>
           </div>
 
