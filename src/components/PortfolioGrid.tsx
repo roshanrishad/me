@@ -33,11 +33,11 @@ const portfolioData = {
     { name: "Propartners", tool: "Figma", description: "Travel and destination booking website with vibrant visuals and user-friendly flow.", color: "accent", images: ["https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop"] },
     { name: "Damas", tool: "Figma", description: "Elegant furniture brand website showcasing products with a premium look and feel.", color: "secondary", images: ["https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop"] }
   ],
-  products: [
-    { name: "CR Logo", tool: "Illustrator", description: "Vibrant and modern tech-style logo with abstract geometric elements and playful colors.", color: "energy-orange", images: ["/me/Images/cr.jpg"] },
-    { name: "Marine X", tool: "Illustrator", description: "Sleek and bold wordmark logo with a strong, futuristic 'X' symbol in gradient blue.", color: "energy-blue", images: ["/me/Images/marinex.png"] },
-    { name: "Rurabox", tool: "Illustrator", description: "Bright and friendly orange logo featuring a basket icon and clean, modern typography.", color: "energy-orange", images: ["/me/Images/rurabox.png"] },
-    { name: "Shinetex", tool: "Illustrator", description: "Elegant monogram logo with a crown accent, combining shield and ribbon elements for a premium brand feel.", color: "primary", images: ["/me/Images/shinetex.png"] }
+  branding: [
+    { name: "Rurabox", tool: "Illustrator", description: "Crafted a vibrant brand identity for a modern marketplace, including a bold logo, business cards, and cohesive visual language.", color: "energy-orange", images: ["/me/Images/r1.png", "/me/Images/r2.png", "/me/Images/r3.png", "/me/Images/r4.png"] },
+    { name: "The Travel Address", tool: "Illustrator", description: "Designed a sophisticated and adventurous brand for a travel company—logo, stationery, and branding elements that inspire exploration.", color: "energy-blue", images: ["/me/Images/t1.png", "/me/Images/t2.png", "/me/Images/t3.png", "/me/Images/t4.png", "/me/Images/t5.png"] },
+    { name: "Arkom", tool: "Illustrator", description: "Built a minimal and modern brand identity for a construction business, covering logo, business cards, and complete visual branding.", color: "energy-orange", images: ["/me/Images/a2.png", "/me/Images/a1.png"] },
+    { name: "Nuvair", tool: "Illustrator", description: "Developed a fresh and clean brand system for a nasal strip company—featuring a sleek logo, print materials, and brand visuals.", color: "primary", images: ["/me/Images/n1.png", "/me/Images/n2.png", "/me/Images/n3.png"] }
   ]
 };
 
