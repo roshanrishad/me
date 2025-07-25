@@ -18,11 +18,11 @@ const portfolioData = {
     { name: "Creative Collection", tool: "Photoshop / Illustrator", description: "A diverse collection of freelance, college, and personal poster projects exploring various themes and styles beyond client work.", color: "energy-blue", images: ["/me/Images/o1.png", "/me/Images/o2.png", "/me/Images/o3.png", "/me/Images/o4.png", "/me/Images/o5.png"] }
   ],
   apps: [
-    { name: "Findnow", tool: "Figma", description: "Location-based business discovery app with a user-friendly and intuitive interface.", color: "energy-green", images: ["https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop"] },
+    { name: "Findnow", tool: "Figma", description: "Location-based business discovery app with a user-friendly and intuitive interface.", color: "energy-green", images: ["/me/Images/c1.png", "/me/Images/c2.png"] },
     { name: "Fakhra", tool: "Figma", description: "Elegant black-and-white e-commerce app designed for premium perfume shopping.", color: "accent", images: ["https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=300&fit=crop"] },
     { name: "Tasleem", tool: "Figma", description: "Bold red-and-white courier service app with a clean and functional layout.", color: "energy-pink", images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop"] },
     { name: "BeOrganic", tool: "Figma", description: "Green-themed grocery shopping app focused on organic and eco-friendly products.", color: "energy-green", images: ["https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=400&h=300&fit=crop"] },
-    { name: "Chargemeter", tool: "Figma", description: "EV charging station locator app with a modern blue, green, and purple color scheme.", color: "energy-blue", images: ["https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop"] },
+    { name: "Chargemeter", tool: "Figma", description: "EV charging station locator app with a modern blue, green, and purple color scheme.", color: "energy-blue", images: ["/me/Images/c1.png", "/me/Images/c2.png"] },
     { name: "Sayartak", tool: "Figma", description: "Vehicle service booking app with a clean blue-and-white interface and service locator tools.", color: "energy-blue", images: ["https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop"] }
   ],
   websites: [
