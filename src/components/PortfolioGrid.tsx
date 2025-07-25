@@ -13,9 +13,9 @@ const portfolioData = {
     { name: "Shinetex", tool: "Illustrator", description: "Elegant monogram logo with a crown accent, combining shield and ribbon elements for a premium brand feel.", color: "primary", images: ["/me/Images/shinetex.png"] }
   ],
   posters: [
-    { name: "CodeRythm", tool: "Photoshop / Illustrator", description: "Creative poster designs for various occasions including Easter, Environment day, Hiring, Holi, NewYear, and Onam celebrations.", color: "energy-orange", images: ["/me/Images/cr1.png", "/me/Images/cr2.png"] },
-    { name: "Moulana Hospital", tool: "Photoshop / Illustrator", description: "Awareness poster designs for Heart day, Earth day, liver day, environmental day, and Alzheimer's day campaigns.", color: "energy-pink", images: ["/me/Images/moulana1.png", "/me/Images/moulana2.png"] },
-    { name: "Institutional Works", tool: "Photoshop / Illustrator", description: "Educational poster designs for Expo events and magazine cover layouts with modern typography and layouts.", color: "energy-blue", images: ["https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop", "https://images.unsplash.com/photo-1505238680356-667803448bb6?w=400&h=300&fit=crop"] }
+    { name: "CodeRythm", tool: "Photoshop / Illustrator", description: "A series of social media posters designed for an IT company, covering special occasions, public holidays, and tech-themed celebrations.", color: "energy-orange", images: ["/me/Images/cr1.png", "/me/Images/cr2.png"] },
+    { name: "Moulana Hospital", tool: "Photoshop / Illustrator", description: "Posters created for a hospital focusing on health awareness, social media engagement, and special occasion campaigns.", color: "energy-pink", images: ["/me/Images/moulana1.png", "/me/Images/moulana2.png"] },
+    { name: "Creative Collection", tool: "Photoshop / Illustrator", description: "A diverse collection of freelance, college, and personal poster projects exploring various themes and styles beyond client work.", color: "energy-blue", images: ["/me/Images/o1.png", "/me/Images/o2.png", "/me/Images/o3.png", "/me/Images/o4.png", "/me/Images/o5.png"] }
   ],
   apps: [
     { name: "Findnow", tool: "Figma", description: "Location-based business discovery app with a user-friendly and intuitive interface.", color: "energy-green", images: ["https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop"] },
