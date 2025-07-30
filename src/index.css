@@ -260,3 +260,10 @@ All colors MUST be HSL for consistency.
   background-size: 400% 400%;
   animation: gradient-shift 8s ease infinite;
 }
+
+.playwrite-hu-regular {
+  font-family: "Playwrite HU", cursive;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}

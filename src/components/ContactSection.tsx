@@ -3,8 +3,24 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useForm, ValidationError } from '@formspree/react';
+import { useEffect } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const ContactSection = () => {
+  const { executeRecaptcha } = useGoogleReCaptcha();
+  const [state, handleSubmit, reset] = useForm("meozzejp", {
+    data: { "g-recaptcha-response": executeRecaptcha }
+  });
+
+  useEffect(() => {
+    if (state.succeeded) {
+      setTimeout(() => {
+        reset();
+      }, 3000);
+    }
+  }, [state.succeeded, reset]);
+    
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
       {/* Background */}
@@ -92,51 +108,67 @@ const ContactSection = () => {
           {/* Contact Form */}
           <Card className="bg-surface border-border/50 shadow-cosmic">
             <CardContent className="p-8">
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium mb-2">Name</label>
+                    <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
                     <Input 
+                      id="name"
+                      name="name"
+                      type="text"
                       placeholder="Your name" 
                       className="bg-muted/20 border-border/50 focus:border-primary transition-smooth rounded-curve"
                     />
+                    <ValidationError className="text-red-500" field="name" prefix="Name" errors={state.errors} />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Email</label>
+                    <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
                     <Input 
+                      id="email"
+                      name="email"
                       type="email" 
                       placeholder="your@email.com" 
                       className="bg-muted/20 border-border/50 focus:border-primary transition-smooth rounded-curve"
                     />
+                    <ValidationError className="text-red-500" field="email" prefix="Email" errors={state.errors} />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Subject</label>
+                  <label htmlFor="subject" className="block text-sm font-medium mb-2">Subject</label>
                   <Input 
+                    id="subject"
+                    name="subject"
+                    type="text"
                     placeholder="What's this about?" 
                     className="bg-muted/20 border-border/50 focus:border-primary transition-smooth rounded-curve"
                   />
+                  <ValidationError className="text-red-500" field="subject" prefix="Subject" errors={state.errors} />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
+                  <label   htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
                   <Textarea 
+                    id="message"
+                    name="message"
                     placeholder="Tell me about your project or just say hello! I love hearing about creative ideas..."
                     className="bg-muted/20 border-border/50 focus:border-primary transition-smooth rounded-curve min-h-32"
                     rows={6}
                   />
+                  <ValidationError className="text-red-500" field="message" prefix="Message" errors={state.errors} />
                 </div>
 
                 <Button 
-                  type="submit" 
+                  type="submit" disabled={state.submitting}
                   size="lg" 
                   className="w-full bg-primary hover:bg-primary-glow glow-primary transition-smooth text-lg rounded-curve"
+                  data-sitekey="6LeDpJQrAAAAACtCfSP6GOmudXkRXzrEROY-rsmJ"
                 >
                   Send Message
                   <Send className="ml-2 w-5 h-5" />
                 </Button>
               </form>
+              {state.succeeded && <p className="text-center text-green-500 mt-4">Thank you for contacting me! I will get back to you as soon as possible.</p>}
             </CardContent>
           </Card>
         </div>
