@@ -1,9 +1,9 @@
-import { ExternalLink, Figma, Monitor, Smartphone, Image as ImageIcon, Palette, Package } from "lucide-react";
+import { ExternalLink, Monitor, Smartphone, Image as ImageIcon, Palette, Package, X, ZoomIn, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const portfolioData = {
   apps: [
@@ -67,7 +67,16 @@ const getCategoryColor = (category: string) => {
 };
 
 const PortfolioGrid = () => {
+  const [zoomedItem, setZoomedItem] = useState<{ images: string[], startIndex: number } | null>(null);
+  const [carouselApi, setCarouselApi] = useState(null);
+
+  useEffect(() => {
+    if (carouselApi && zoomedItem) {
+      carouselApi.scrollTo(zoomedItem.startIndex);
+    }
+  }, [carouselApi, zoomedItem]);
   return (
+    <>
     <section id="portfolio" className="py-20 relative">
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
@@ -160,7 +169,9 @@ const PortfolioGrid = () => {
                     </Card>
                   </DialogTrigger>
 
-                  <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                  <DialogContent 
+                    className="max-w-4xl max-h-[90vh] overflow-y-auto"
+                  >
                     <DialogHeader>
                       <DialogTitle className="text-2xl font-bold text-gradient-cosmic">
                         {item.name}
@@ -178,8 +189,16 @@ const PortfolioGrid = () => {
                             <CarouselItem key={index}>
                               <div className="p-1">
                                 <Card>
-                                  <CardContent className="flex aspect-video items-center justify-center p-0 rounded-sm overflow-hidden">
-                                    <img src={image} alt={`${item.name} screenshot ${index + 1}`} className="w-full h-full object-contain" />
+                                  <CardContent className="flex aspect-video items-center justify-center p-0 rounded-sm overflow-hidden relative group">
+                                    <img src={image} alt={`${item.name} screenshot ${index + 1}`} className="w-full h-full object-contain transition-transform hover:scale-105" />
+                                    <div 
+                                      className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center cursor-zoom-in" 
+                                      onClick={() => setZoomedItem({ images: item.images, startIndex: index })}
+                                    >
+                                      <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 rounded-full p-2 pointer-events-none">
+                                        <ZoomIn className="w-5 h-5 text-black" />
+                                      </div>
+                                    </div>
                                   </CardContent>
                                 </Card>
                               </div>
@@ -258,6 +277,71 @@ const PortfolioGrid = () => {
       {/* Curved transitions */}
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-muted/20 curve-wave" />
     </section>
+
+    {/* Zoom overlay with its own carousel */}
+    {zoomedItem && (
+      <div 
+        className="fixed inset-0 z-40 bg-black/90 flex items-center justify-center p-4 backdrop-blur-sm"
+        onClick={() => setZoomedItem(null)}
+      >
+        {/* Close button */}
+        <button 
+          className="absolute top-4 right-4 z-40 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors"
+          onClick={() => setZoomedItem(null)}
+        >
+          <X className="w-6 h-6 text-white" />
+        </button>
+
+        {/* Centered Carousel for Zoomed View */}
+        <div className="w-full max-w-4xl mx-auto relative">
+          {/* <p className="text-white">{JSON.stringify(zoomedItem)}</p> */}
+          {/* <p className="text-white">{JSON.stringify(carouselApi)}</p> */}
+          <Carousel 
+            className="w-full"
+            opts={{ 
+              loop: true
+            }}
+            setApi={setCarouselApi}
+          >
+            <CarouselContent className="-ml-0">
+              {zoomedItem.images.map((image, index) => (
+                <CarouselItem key={index} className="pl-0">
+                  <div className="flex justify-center items-center min-h-[85vh] p-4">
+                    <img 
+                      src={image} 
+                      alt={`Zoomed view ${index + 1}`} 
+                      className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            {/* {zoomedItem.images.length > 1 && (
+              <>
+                <button 
+                  className="absolute z-50 left-0 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-full p-2 transition-colors z-10"
+                  onClick={() => carouselApi?.scrollPrev()}
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button 
+                  className="absolute z-50 right-0 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-full p-2 transition-colors z-10"
+                  onClick={() => carouselApi?.scrollNext()}
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+              </>
+            )} */}
+          </Carousel>
+        </div>
+
+        {/* Instructions */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white/70 text-sm">
+          Click anywhere outside the image to close
+        </div>
+      </div>
+    )}
+    </>
   );
 };
 
