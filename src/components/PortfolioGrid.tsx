@@ -18,12 +18,12 @@ const portfolioData = {
     { name: "Beauty Saloon", tool: "Figma", description: "A salon booking app with a vibrant pink and purple gradient interface, offering seamless appointment scheduling for various beauty services.", color: "energy-blue", images: ["/me/Images/bs1.png", "/me/Images/bs2.png"] }
   ],
   websites: [
-    { name: "CodeRythm", tool: "Figma", description: "Modern rebranding website for an IT solutions company with sleek animations and smooth transitions.", color: "primary", images: ["/me/Images/cw1.png", "/me/Images/bs2.png"] },
+    { name: "CodeRythm", tool: "Figma", description: "Modern rebranding website for an IT solutions company with sleek animations and smooth transitions.", color: "primary", images: ["/me/Images/cw1.png", "/me/Images/cw2.png"] },
     { name: "Aqtabot", tool: "Figma", description: "Location-based business directory website designed for seamless local discovery.", color: "energy-green", images: ["/me/Images/aw1.png", "/me/Images/bs2.png"] },
     { name: "Edison AI", tool: "Figma", description: "Conversational AI platform website with a futuristic UI", color: "energy-blue", images: ["/me/Images/e1.png", "/me/Images/bs2.png"] },
     { name: "Mobicart", tool: "Figma", description: "E-commerce website for mobile devices and parts with a clean, tech-oriented layout.", color: "energy-orange", images: ["/me/Images/mc1.png", "/me/Images/bs2.png"] },
-    { name: "Propartners", tool: "Figma", description: "Travel and destination booking website with vibrant visuals and user-friendly flow.", color: "accent", images: ["/me/Images/p1.png", "/me/Images/bs2.png"] },
-    { name: "Damas Furnitures", tool: "Figma", description: "Elegant furniture brand website showcasing products with a premium look and feel.", color: "secondary", images: ["/me/Images/d1.png", "/me/Images/bs2.png"] },
+    { name: "Propartners", tool: "Figma", description: "Travel and destination booking website with vibrant visuals and user-friendly flow.", color: "accent", images: ["/me/Images/p1.png", "/me/Images/p2.png"] },
+    { name: "Damas Furnitures", tool: "Figma", description: "Elegant furniture brand website showcasing products with a premium look and feel.", color: "secondary", images: ["/me/Images/d1.png", "/me/Images/d2.png"] },
     { name: "Fakhra", tool: "Figma", description: "A sophisticated e-commerce website for perfumes, featuring a luxurious design and smooth shopping experience with elegant product displays.", color: "secondary", images: ["/me/Images/fw1.png", "/me/Images/bs2.png"] },
     { name: "Moulana Hospital", tool: "Figma", description: "A modern healthcare website with a clean, user-friendly layout, offering easy access to departments, doctor bookings, and patient services.", color: "secondary", images: ["/me/Images/mw1.png", "/me/Images/bs2.png"] }
   ],
