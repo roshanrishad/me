@@ -19,8 +19,8 @@ const portfolioData = {
   ],
   websites: [
     { name: "CodeRythm", tool: "Figma", description: "Modern rebranding website for an IT solutions company with sleek animations and smooth transitions.", color: "primary", images: ["/me/Images/cw1.png", "/me/Images/cw2.png"] },
-    { name: "Aqtabot", tool: "Figma", description: "Location-based business directory website designed for seamless local discovery.", color: "energy-green", images: ["/me/Images/aw1.png", "/me/Images/bs2.png"] },
-    { name: "Edison AI", tool: "Figma", description: "Conversational AI platform website with a futuristic UI", color: "energy-blue", images: ["/me/Images/e1.png", "/me/Images/bs2.png"] },
+    { name: "Aqtabot", tool: "Figma", description: "Location-based business directory website designed for seamless local discovery.", color: "energy-green", images: ["/me/Images/aw1.png", "/me/Images/aw2.png"] },
+    { name: "Edison AI", tool: "Figma", description: "Conversational AI platform website with a futuristic UI", color: "energy-blue", images: ["/me/Images/e1.png", "/me/Images/e2.png"] },
     { name: "Mobicart", tool: "Figma", description: "E-commerce website for mobile devices and parts with a clean, tech-oriented layout.", color: "energy-orange", images: ["/me/Images/mc1.png", "/me/Images/bs2.png"] },
     { name: "Propartners", tool: "Figma", description: "Travel and destination booking website with vibrant visuals and user-friendly flow.", color: "accent", images: ["/me/Images/p1.png", "/me/Images/p2.png"] },
     { name: "Damas Furnitures", tool: "Figma", description: "Elegant furniture brand website showcasing products with a premium look and feel.", color: "secondary", images: ["/me/Images/d1.png", "/me/Images/d2.png"] },
