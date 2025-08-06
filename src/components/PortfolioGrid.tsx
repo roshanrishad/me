@@ -23,7 +23,7 @@ const portfolioData = {
     { name: "Edison AI", tool: "Figma", description: "Conversational AI platform website with a futuristic UI", color: "energy-blue", images: ["/me/Images/e1.png", "/me/Images/bs2.png"] },
     { name: "Mobicart", tool: "Figma", description: "E-commerce website for mobile devices and parts with a clean, tech-oriented layout.", color: "energy-orange", images: ["/me/Images/mc1.png", "/me/Images/bs2.png"] },
     { name: "Propartners", tool: "Figma", description: "Travel and destination booking website with vibrant visuals and user-friendly flow.", color: "accent", images: ["/me/Images/p1.png", "/me/Images/bs2.png"] },
-    { name: "Damas", tool: "Figma", description: "Elegant furniture brand website showcasing products with a premium look and feel.", color: "secondary", images: ["/me/Images/d1.png", "/me/Images/bs2.png"] },
+    { name: "Damas Furnitures", tool: "Figma", description: "Elegant furniture brand website showcasing products with a premium look and feel.", color: "secondary", images: ["/me/Images/d1.png", "/me/Images/bs2.png"] },
     { name: "Fakhra", tool: "Figma", description: "A sophisticated e-commerce website for perfumes, featuring a luxurious design and smooth shopping experience with elegant product displays.", color: "secondary", images: ["/me/Images/fw1.png", "/me/Images/bs2.png"] },
     { name: "Moulana Hospital", tool: "Figma", description: "A modern healthcare website with a clean, user-friendly layout, offering easy access to departments, doctor bookings, and patient services.", color: "secondary", images: ["/me/Images/mw1.png", "/me/Images/bs2.png"] }
   ],
