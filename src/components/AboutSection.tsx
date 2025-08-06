@@ -1,6 +1,6 @@
 import { Sparkles, Heart, Code2, Palette, Coffee, Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import roshanPortrait from "/me/Images/me2.jpg";
+import roshanPortrait from "@/assets/me2.png";
 
 const skills = [
   { name: "UI/UX Design", icon: Palette, level: 95, color: "energy-pink" },
