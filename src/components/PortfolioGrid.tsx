@@ -18,14 +18,14 @@ const portfolioData = {
     { name: "Beauty Saloon", tool: "Figma", description: "A salon booking app with a vibrant pink and purple gradient interface, offering seamless appointment scheduling for various beauty services.", color: "energy-blue", images: ["/me/Images/bs1.png", "/me/Images/bs2.png"] }
   ],
   websites: [
-    { name: "CodeRythm", tool: "Figma", description: "Modern rebranding website for an IT solutions company with sleek animations and smooth transitions.", color: "primary", images: ["https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=300&fit=crop"] },
-    { name: "Aqtabot", tool: "Figma", description: "Location-based business directory website designed for seamless local discovery.", color: "energy-green", images: ["https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop"] },
-    { name: "Edison AI", tool: "Figma", description: "Conversational AI platform website with a futuristic UI", color: "energy-blue", images: ["https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&h=300&fit=crop"] },
-    { name: "Mobicart", tool: "Figma", description: "E-commerce website for mobile devices and parts with a clean, tech-oriented layout.", color: "energy-orange", images: ["https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop"] },
-    { name: "Propartners", tool: "Figma", description: "Travel and destination booking website with vibrant visuals and user-friendly flow.", color: "accent", images: ["https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=300&fit=crop"] },
-    { name: "Damas", tool: "Figma", description: "Elegant furniture brand website showcasing products with a premium look and feel.", color: "secondary", images: ["https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop"] },
-    { name: "Fakhra", tool: "Figma", description: "A sophisticated e-commerce website for perfumes, featuring a luxurious design and smooth shopping experience with elegant product displays.", color: "secondary", images: ["https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop"] },
-    { name: "Moulana Hospital", tool: "Figma", description: "A modern healthcare website with a clean, user-friendly layout, offering easy access to departments, doctor bookings, and patient services.", color: "secondary", images: ["https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop"] }
+    { name: "CodeRythm", tool: "Figma", description: "Modern rebranding website for an IT solutions company with sleek animations and smooth transitions.", color: "primary", images: ["/me/Images/cw1.png", "/me/Images/bs2.png"] },
+    { name: "Aqtabot", tool: "Figma", description: "Location-based business directory website designed for seamless local discovery.", color: "energy-green", images: ["/me/Images/aw1.png", "/me/Images/bs2.png"] },
+    { name: "Edison AI", tool: "Figma", description: "Conversational AI platform website with a futuristic UI", color: "energy-blue", images: ["/me/Images/e1.png", "/me/Images/bs2.png"] },
+    { name: "Mobicart", tool: "Figma", description: "E-commerce website for mobile devices and parts with a clean, tech-oriented layout.", color: "energy-orange", images: ["/me/Images/mc1.png", "/me/Images/bs2.png"] },
+    { name: "Propartners", tool: "Figma", description: "Travel and destination booking website with vibrant visuals and user-friendly flow.", color: "accent", images: ["/me/Images/p1.png", "/me/Images/bs2.png"] },
+    { name: "Damas", tool: "Figma", description: "Elegant furniture brand website showcasing products with a premium look and feel.", color: "secondary", images: ["/me/Images/d1.png", "/me/Images/bs2.png"] },
+    { name: "Fakhra", tool: "Figma", description: "A sophisticated e-commerce website for perfumes, featuring a luxurious design and smooth shopping experience with elegant product displays.", color: "secondary", images: ["/me/Images/fw1.png", "/me/Images/bs2.png"] },
+    { name: "Moulana Hospital", tool: "Figma", description: "A modern healthcare website with a clean, user-friendly layout, offering easy access to departments, doctor bookings, and patient services.", color: "secondary", images: ["/me/Images/mw1.png", "/me/Images/bs2.png"] }
   ],
   logos: [ 
     { name: "CR Logo", tool: "Illustrator", description: "Vibrant and modern tech-style logo with abstract geometric elements and playful colors.", color: "energy-orange", images: ["/me/Images/cr.jpg"] },

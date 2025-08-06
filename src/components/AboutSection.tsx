@@ -1,6 +1,6 @@
 import { Sparkles, Heart, Code2, Palette, Coffee, Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import roshanPortrait from "@/assets/roshan-portrait.jpg";
+import roshanPortrait from "/me/Images/me2.jpg";
 
 const skills = [
   { name: "UI/UX Design", icon: Palette, level: 95, color: "energy-pink" },
@@ -34,7 +34,7 @@ const AboutSection = () => {
                 
                 {/* Floating elements around portrait */}
                 <div className="absolute -top-6 -right-6 w-12 h-12 bg-energy-orange rounded-full float opacity-80" />
-                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-energy-green rounded-full float-delayed opacity-70" />
+                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-energy-blue rounded-full float-delayed opacity-70" />
                 <div className="absolute top-1/2 -right-8 w-8 h-8 bg-energy-pink rounded-full float opacity-90" />
               </div>
               
