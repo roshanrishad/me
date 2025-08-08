@@ -42,7 +42,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="h-26 w-32 ">
-  <img src="/me/Images/mylogo.png" className="h-42" alt="Logo" />
+  <img src="/Images/mylogo.png" className="h-42" alt="Logo" />
 </div>
             <span className="text-xl font-bold text-gradient-cosmic"></span>
           </div>

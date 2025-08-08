@@ -8,42 +8,42 @@ import { createPortal } from 'react-dom';
 
 const portfolioData = {
   apps: [
-    { name: "Findnow", tool: "Figma", description: "Location-based business discovery app with a user-friendly and intuitive interface.", color: "energy-green", images: ["/me/Images/fi1.png", "/me/Images/fi2.png"] },
-    { name: "Fakhra", tool: "Figma", description: "Elegant black-and-white e-commerce app designed for premium perfume shopping.", color: "accent", images: ["/me/Images/f1.png", "/me/Images/f2.png"] },
-    { name: "Tasleem", tool: "Figma", description: "Bold red-and-white courier service app with a clean and functional layout.", color: "energy-pink", images: ["/me/Images/ta1.png", "/me/Images/ta2.png"] },
-    { name: "BeOrganic", tool: "Figma", description: "Green-themed grocery shopping app focused on organic and eco-friendly products.", color: "energy-green", images: ["/me/Images/b1.png", "/me/Images/b2.png"] },
-    { name: "Chargemeter", tool: "Figma", description: "EV charging station locator app with a modern blue, green, and purple color scheme.", color: "energy-blue", images: ["/me/Images/c1.png", "/me/Images/c2.png"] },
-    { name: "Sayartak", tool: "Figma", description: "Vehicle service booking app with a clean blue-and-white interface and service locator tools.", color: "energy-blue", images: ["/me/Images/s1.png", "/me/Images/s2.png"] },
-    { name: "MediaOne", tool: "Figma", description: "News app based in Kerala with a clean blue-and-white interface, delivering real-time updates and intuitive news browsing.", color: "energy-blue", images: ["/me/Images/m1.png", "/me/Images/m2.png"] },
-    { name: "Loko", tool: "Figma", description: "Food truck booking app with a minimal blue-and-white interface, allowing users to pre-order meals and skip the wait at the truck.", color: "energy-blue", images: ["/me/Images/l1.png", "/me/Images/l2.png"] },
-    { name: "Beauty Saloon", tool: "Figma", description: "A salon booking app with a vibrant pink and purple gradient interface, offering seamless appointment scheduling for various beauty services.", color: "energy-blue", images: ["/me/Images/bs1.png", "/me/Images/bs2.png"] }
+    { name: "Findnow", tool: "Figma", description: "Location-based business discovery app with a user-friendly and intuitive interface.", color: "energy-green", images: ["/Images/fi1.png", "/Images/fi2.png"] },
+    { name: "Fakhra", tool: "Figma", description: "Elegant black-and-white e-commerce app designed for premium perfume shopping.", color: "accent", images: ["/Images/f1.png", "/Images/f2.png"] },
+    { name: "Tasleem", tool: "Figma", description: "Bold red-and-white courier service app with a clean and functional layout.", color: "energy-pink", images: ["/Images/ta1.png", "/Images/ta2.png"] },
+    { name: "BeOrganic", tool: "Figma", description: "Green-themed grocery shopping app focused on organic and eco-friendly products.", color: "energy-green", images: ["/Images/b1.png", "/Images/b2.png"] },
+    { name: "Chargemeter", tool: "Figma", description: "EV charging station locator app with a modern blue, green, and purple color scheme.", color: "energy-blue", images: ["/Images/c1.png", "/Images/c2.png"] },
+    { name: "Sayartak", tool: "Figma", description: "Vehicle service booking app with a clean blue-and-white interface and service locator tools.", color: "energy-blue", images: ["/Images/s1.png", "/Images/s2.png"] },
+    { name: "MediaOne", tool: "Figma", description: "News app based in Kerala with a clean blue-and-white interface, delivering real-time updates and intuitive news browsing.", color: "energy-blue", images: ["/Images/m1.png", "/Images/m2.png"] },
+    { name: "Loko", tool: "Figma", description: "Food truck booking app with a minimal blue-and-white interface, allowing users to pre-order meals and skip the wait at the truck.", color: "energy-blue", images: ["/Images/l1.png", "/Images/l2.png"] },
+    { name: "Beauty Saloon", tool: "Figma", description: "A salon booking app with a vibrant pink and purple gradient interface, offering seamless appointment scheduling for various beauty services.", color: "energy-blue", images: ["/Images/bs1.png", "/Images/bs2.png"] }
   ],
   websites: [
-    { name: "CodeRythm", tool: "Figma", description: "Modern rebranding website for an IT solutions company with sleek animations and smooth transitions.", color: "primary", images: ["/me/Images/cw1.png", "/me/Images/cw2.png"] },
-    { name: "Aqtabot", tool: "Figma", description: "Location-based business directory website designed for seamless local discovery.", color: "energy-green", images: ["/me/Images/aw1.png", "/me/Images/aw2.png"] },
-    { name: "Edison AI", tool: "Figma", description: "Conversational AI platform website with a futuristic UI", color: "energy-blue", images: ["/me/Images/e1.png", "/me/Images/e2.png"] },
-    { name: "Mobicart", tool: "Figma", description: "E-commerce website for mobile devices and parts with a clean, tech-oriented layout.", color: "energy-orange", images: ["/me/Images/mc1.png", "/me/Images/mc2.png"] },
-    { name: "Propartners", tool: "Figma", description: "Travel and destination booking website with vibrant visuals and user-friendly flow.", color: "accent", images: ["/me/Images/p1.png", "/me/Images/p2.png"] },
-    { name: "Damas Furnitures", tool: "Figma", description: "Elegant furniture brand website showcasing products with a premium look and feel.", color: "secondary", images: ["/me/Images/d1.png", "/me/Images/d2.png"] },
-    { name: "Fakhra", tool: "Figma", description: "A sophisticated e-commerce website for perfumes, featuring a luxurious design and smooth shopping experience with elegant product displays.", color: "secondary", images: ["/me/Images/fw1.png", "/me/Images/fw2.png"] },
-    { name: "Moulana Hospital", tool: "Figma", description: "A modern healthcare website with a clean, user-friendly layout, offering easy access to departments, doctor bookings, and patient services.", color: "secondary", images: ["/me/Images/mw1.png", "/me/Images/mw2.png"] }
+    { name: "CodeRythm", tool: "Figma", description: "Modern rebranding website for an IT solutions company with sleek animations and smooth transitions.", color: "primary", images: ["/Images/cw1.png", "/Images/cw2.png"] },
+    { name: "Aqtabot", tool: "Figma", description: "Location-based business directory website designed for seamless local discovery.", color: "energy-green", images: ["/Images/aw1.png", "/Images/aw2.png"] },
+    { name: "Edison AI", tool: "Figma", description: "Conversational AI platform website with a futuristic UI", color: "energy-blue", images: ["/Images/e1.png", "/Images/e2.png"] },
+    { name: "Mobicart", tool: "Figma", description: "E-commerce website for mobile devices and parts with a clean, tech-oriented layout.", color: "energy-orange", images: ["/Images/mc1.png", "/Images/mc2.png"] },
+    { name: "Propartners", tool: "Figma", description: "Travel and destination booking website with vibrant visuals and user-friendly flow.", color: "accent", images: ["/Images/p1.png", "/Images/p2.png"] },
+    { name: "Damas Furnitures", tool: "Figma", description: "Elegant furniture brand website showcasing products with a premium look and feel.", color: "secondary", images: ["/Images/d1.png", "/Images/d2.png"] },
+    { name: "Fakhra", tool: "Figma", description: "A sophisticated e-commerce website for perfumes, featuring a luxurious design and smooth shopping experience with elegant product displays.", color: "secondary", images: ["/Images/fw1.png", "/Images/fw2.png"] },
+    { name: "Moulana Hospital", tool: "Figma", description: "A modern healthcare website with a clean, user-friendly layout, offering easy access to departments, doctor bookings, and patient services.", color: "secondary", images: ["/Images/mw1.png", "/Images/mw2.png"] }
   ],
   logos: [ 
-    { name: "CR Logo", tool: "Illustrator", description: "Vibrant and modern tech-style logo with abstract geometric elements and playful colors.", color: "energy-orange", images: ["/me/Images/cr.jpg"] },
-    { name: "Marine X", tool: "Illustrator", description: "Sleek and bold wordmark logo with a strong, futuristic 'X' symbol in gradient blue.", color: "energy-blue", images: ["/me/Images/marinex.png"] },
-    { name: "Rurabox", tool: "Illustrator", description: "Bright and friendly orange logo featuring a basket icon and clean, modern typography.", color: "energy-orange", images: ["/me/Images/rurabox.png"] },
-    { name: "Shinetex", tool: "Illustrator", description: "Elegant monogram logo with a crown accent, combining shield and ribbon elements for a premium brand feel.", color: "primary", images: ["/me/Images/shinetex.png"] }
+    { name: "CR Logo", tool: "Illustrator", description: "Vibrant and modern tech-style logo with abstract geometric elements and playful colors.", color: "energy-orange", images: ["/Images/cr.jpg"] },
+    { name: "Marine X", tool: "Illustrator", description: "Sleek and bold wordmark logo with a strong, futuristic 'X' symbol in gradient blue.", color: "energy-blue", images: ["/Images/marinex.png"] },
+    { name: "Rurabox", tool: "Illustrator", description: "Bright and friendly orange logo featuring a basket icon and clean, modern typography.", color: "energy-orange", images: ["/Images/rurabox.png"] },
+    { name: "Shinetex", tool: "Illustrator", description: "Elegant monogram logo with a crown accent, combining shield and ribbon elements for a premium brand feel.", color: "primary", images: ["/Images/shinetex.png"] }
   ],
   branding: [
-    { name: "Rurabox", tool: "Illustrator", description: "Crafted a vibrant brand identity for a modern marketplace, including a bold logo, business cards, and cohesive visual language.", color: "energy-orange", images: ["/me/Images/r1.png", "/me/Images/r2.png", "/me/Images/r3.png", "/me/Images/r4.png"] },
-    { name: "The Travel Address", tool: "Illustrator", description: "Designed a sophisticated and adventurous brand for a travel company—logo, stationery, and branding elements that inspire exploration.", color: "energy-blue", images: ["/me/Images/t1.png", "/me/Images/t2.png", "/me/Images/t3.png", "/me/Images/t4.png", "/me/Images/t5.png"] },
-    { name: "Arkom", tool: "Illustrator", description: "Built a minimal and modern brand identity for a construction business, covering logo, business cards, and complete visual branding.", color: "energy-orange", images: ["/me/Images/a2.png", "/me/Images/a1.png"] },
-    { name: "Nuvair", tool: "Illustrator", description: "Developed a fresh and clean brand system for a nasal strip company—featuring a sleek logo, print materials, and brand visuals.", color: "primary", images: ["/me/Images/n1.png", "/me/Images/n2.png", "/me/Images/n3.png"] }
+    { name: "Rurabox", tool: "Illustrator", description: "Crafted a vibrant brand identity for a modern marketplace, including a bold logo, business cards, and cohesive visual language.", color: "energy-orange", images: ["/Images/r1.png", "/Images/r2.png", "/Images/r3.png", "/Images/r4.png"] },
+    { name: "The Travel Address", tool: "Illustrator", description: "Designed a sophisticated and adventurous brand for a travel company—logo, stationery, and branding elements that inspire exploration.", color: "energy-blue", images: ["/Images/t1.png", "/Images/t2.png", "/Images/t3.png", "/Images/t4.png", "/Images/t5.png"] },
+    { name: "Arkom", tool: "Illustrator", description: "Built a minimal and modern brand identity for a construction business, covering logo, business cards, and complete visual branding.", color: "energy-orange", images: ["/Images/a2.png", "/Images/a1.png"] },
+    { name: "Nuvair", tool: "Illustrator", description: "Developed a fresh and clean brand system for a nasal strip company—featuring a sleek logo, print materials, and brand visuals.", color: "primary", images: ["/Images/n1.png", "/Images/n2.png", "/Images/n3.png"] }
   ],
   posters: [
-    { name: "CodeRythm", tool: "Photoshop / Illustrator", description: "A series of social media posters designed for an IT company, covering special occasions, public holidays, and tech-themed celebrations.", color: "energy-orange", images: ["/me/Images/cr1.png", "/me/Images/cr2.png"] },
-    { name: "Moulana Hospital", tool: "Photoshop / Illustrator", description: "Posters created for a hospital focusing on health awareness, social media engagement, and special occasion campaigns.", color: "energy-pink", images: ["/me/Images/moulana1.png", "/me/Images/moulana2.png"] },
-    { name: "Creative Collection", tool: "Photoshop / Illustrator", description: "A diverse collection of freelance, college, and personal poster projects exploring various themes and styles beyond client work.", color: "energy-blue", images: ["/me/Images/o1.png", "/me/Images/o2.png", "/me/Images/o3.png", "/me/Images/o4.png", "/me/Images/o5.png"] }
+    { name: "CodeRythm", tool: "Photoshop / Illustrator", description: "A series of social media posters designed for an IT company, covering special occasions, public holidays, and tech-themed celebrations.", color: "energy-orange", images: ["/Images/cr1.png", "/Images/cr2.png"] },
+    { name: "Moulana Hospital", tool: "Photoshop / Illustrator", description: "Posters created for a hospital focusing on health awareness, social media engagement, and special occasion campaigns.", color: "energy-pink", images: ["/Images/moulana1.png", "/Images/moulana2.png"] },
+    { name: "Creative Collection", tool: "Photoshop / Illustrator", description: "A diverse collection of freelance, college, and personal poster projects exploring various themes and styles beyond client work.", color: "energy-blue", images: ["/Images/o1.png", "/Images/o2.png", "/Images/o3.png", "/Images/o4.png", "/Images/o5.png"] }
   ]
 };
 
