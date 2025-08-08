@@ -46,7 +46,7 @@ const Hero = () => {
 
 <TrueFocus 
 sentence="Roshan's Atelier"
-manualMode={true}
+manualModeInit={false}
 blurAmount={5}
 borderColor="purple"
 animationDuration={1}

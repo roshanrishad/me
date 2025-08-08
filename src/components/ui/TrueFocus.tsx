@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 interface TrueFocusProps {
     sentence?: string;
-    manualMode?: boolean;
+    manualModeInit?: boolean;
     blurAmount?: number;
     borderColor?: string;
     glowColor?: string;
@@ -20,7 +20,7 @@ interface FocusRect {
 
 const TrueFocus: React.FC<TrueFocusProps> = ({
     sentence = "True Focus",
-    manualMode = false,
+    manualModeInit = false,
     blurAmount = 5,
     borderColor = "green",
     glowColor = "rgba(0, 255, 0, 0.6)",
@@ -33,6 +33,7 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
     const containerRef = useRef<HTMLDivElement | null>(null);
     const wordRefs = useRef<(HTMLSpanElement | null)[]>([]);
     const [focusRect, setFocusRect] = useState<FocusRect>({ x: 0, y: 0, width: 0, height: 0 });
+    const [manualMode, setManualMode] = useState<boolean>(manualModeInit);
 
     useEffect(() => {
         if (!manualMode) {
@@ -58,6 +59,14 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
             height: activeRect.height,
         });
     }, [currentIndex, words.length]);
+
+    useEffect(() => {
+        setTimeout(() => {            
+            if(!manualMode){
+                setManualMode(true);
+            }
+        }, 5000);
+    }, []);
 
     const handleMouseEnter = (index: number) => {
         if (manualMode) {

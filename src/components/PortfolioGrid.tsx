@@ -3,7 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 
 const portfolioData = {
   apps: [
@@ -71,10 +72,53 @@ const getCategoryColor = (category: string) => {
 const PortfolioGrid = () => {
   const [zoomedItem, setZoomedItem] = useState<{ images: string[], startIndex: number } | null>(null);
   const [carouselApi, setCarouselApi] = useState(null);
+  
+  // Create a ref for the portal container
+  const portalRef = useRef<HTMLDivElement | null>(null);
+  
+  // Create portal container on mount
+  useEffect(() => {
+    // Check if portal container already exists
+    let container = document.getElementById('zoom-portal');
+    
+    if (!container) {
+      // Create portal container if it doesn't exist
+      container = document.createElement('div');
+      container.id = 'zoom-portal';
+      document.body.appendChild(container);
+    }
+    
+    portalRef.current = container as HTMLDivElement;
+    
+    // Cleanup on unmount
+    return () => {
+      if (container && container.parentNode) {
+        container.parentNode.removeChild(container);
+      }
+    };
+  }, []);
+  
+  // Handle body scroll lock when zoom overlay is open
+  useEffect(() => {
+    if (zoomedItem) {
+      // Prevent body scrolling when zoom overlay is open
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Re-enable body scrolling when zoom overlay is closed
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      // Ensure body scrolling is re-enabled on unmount
+      document.body.style.overflow = '';
+    };
+  }, [zoomedItem]);
 
   useEffect(() => {
     if (carouselApi && zoomedItem) {
-      carouselApi.scrollTo(zoomedItem.startIndex);
+      setTimeout(() => {
+        carouselApi.scrollTo(zoomedItem.startIndex);
+      }, 50); // Small delay to ensure carousel is ready
     }
   }, [carouselApi, zoomedItem]);
   return (
@@ -280,24 +324,29 @@ const PortfolioGrid = () => {
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-muted/20 curve-wave" />
     </section>
 
-    {/* Zoom overlay with its own carousel */}
-    {zoomedItem && (
+    {/* Zoom overlay rendered in a portal outside the dialog hierarchy */}
+    {zoomedItem && portalRef.current && createPortal(
       <div 
-        className="fixed inset-0 z-40 bg-black/90 flex items-center justify-center p-4 backdrop-blur-sm"
-        onClick={() => setZoomedItem(null)}
+        className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 backdrop-blur-sm"
+        onClick={(e) => {
+          e.stopPropagation();
+          setZoomedItem(null);
+        }}
+        style={{ pointerEvents: 'auto' }}
       >
         {/* Close button */}
         <button 
-          className="absolute top-4 right-4 z-40 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors"
-          onClick={() => setZoomedItem(null)}
+          className="absolute top-4 right-4 z-[101] bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors"
+          onClick={(e) => {
+            e.stopPropagation();
+            setZoomedItem(null);
+          }}
         >
           <X className="w-6 h-6 text-white" />
         </button>
 
         {/* Centered Carousel for Zoomed View */}
         <div className="w-full max-w-4xl mx-auto relative">
-          {/* <p className="text-white">{JSON.stringify(zoomedItem)}</p> */}
-          {/* <p className="text-white">{JSON.stringify(carouselApi)}</p> */}
           <Carousel 
             className="w-full"
             opts={{ 
@@ -312,36 +361,44 @@ const PortfolioGrid = () => {
                     <img 
                       src={image} 
                       alt={`Zoomed view ${index + 1}`} 
-                      className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
+                      className="max-h-full max-w-full object-contain"
                     />
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            {/* {zoomedItem.images.length > 1 && (
+
+            {zoomedItem.images.length > 1 && (
               <>
                 <button 
-                  className="absolute z-50 left-0 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-full p-2 transition-colors z-10"
-                  onClick={() => carouselApi?.scrollPrev()}
+                  className="absolute z-[101] left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-full p-2 transition-colors"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    carouselApi?.scrollPrev();
+                  }}
                 >
                   <ChevronLeft className="w-6 h-6" />
                 </button>
                 <button 
-                  className="absolute z-50 right-0 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-full p-2 transition-colors z-10"
-                  onClick={() => carouselApi?.scrollNext()}
+                  className="absolute z-[101] right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-full p-2 transition-colors"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    carouselApi?.scrollNext();
+                  }}
                 >
                   <ChevronRight className="w-6 h-6" />
                 </button>
               </>
-            )} */}
+            )}
           </Carousel>
         </div>
-
+        
         {/* Instructions */}
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white/70 text-sm">
           Click anywhere outside the image to close
         </div>
-      </div>
+      </div>,
+      portalRef.current
     )}
     </>
   );
